@@ -122,25 +122,25 @@
     <Compile Include="Controls\ButtonControl.xaml.cs">
       <DependentUpon>ButtonControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChocolateView.xaml.cs">
+    <Compile Include="Views\ChocolateView.xaml.cs">
       <DependentUpon>ChocolateView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CinnamonView.xaml.cs">
+    <Compile Include="Views\CinnamonView.xaml.cs">
       <DependentUpon>CinnamonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HomeView.xaml.cs">
+    <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result.cs" />
-    <Compile Include="RndFoodView.xaml.cs">
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Views\RndFoodView.xaml.cs">
       <DependentUpon>RndFoodView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RootObject.cs" />
-    <Compile Include="SavedRecipiesView.xaml.cs">
+    <Compile Include="Models\RootObject.cs" />
+    <Compile Include="Views\SavedRecipiesView.xaml.cs">
       <DependentUpon>SavedRecipiesView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -168,15 +168,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ChocolateView.xaml">
+    <Page Include="Views\ChocolateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CinnamonView.xaml">
+    <Page Include="Views\CinnamonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HomeView.xaml">
+    <Page Include="Views\HomeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,11 +184,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RndFoodView.xaml">
+    <Page Include="Views\RndFoodView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SavedRecipiesView.xaml">
+    <Page Include="Views\SavedRecipiesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
