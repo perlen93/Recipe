@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="RecipieBook.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RecipieBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:RecipieBook.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView IsBackButtonVisible="Collapsed"
+                        IsSettingsVisible="False"
+                        IsPaneOpen="False"
+                        Header="Recipes"                       
+                        x:Name="NavView"
+                        SelectionChanged ="MenuSelected">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Home" 
+                                    Content="Home" 
+                                    Tag="Home">
+                </NavigationViewItem>
+                
+                <NavigationViewItem Content="Food" 
+                                    Tag="RndFood">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEA3A;"></FontIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content ="Cinnamon"                                    
+                                    Tag="Cinnamon">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEA3A;"></FontIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                
+                <NavigationViewItem Content="Chocolate" 
+                                    Tag="Chocolate">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEA3A;"></FontIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Saved recipies" 
+                                    Tag="Saved">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE74E;"></FontIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame"></Frame>
+        </NavigationView>
+    </Grid>
+</Page>

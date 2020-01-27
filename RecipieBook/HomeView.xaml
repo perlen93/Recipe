@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="RecipieBook.HomeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RecipieBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock
+            Foreground="White"
+            Margin="10">
+            <LineBreak />
+            Hi! <LineBreak /> On this application you can randomly get a recipie. If you like, you can save the recepie. <LineBreak />
+            All of your recipies and saved ones you'll find at the menu on the left. <LineBreak />
+            <LineBreak />
+            Happy cooking!            
+        </TextBlock>
+    </Grid>
+</Page>

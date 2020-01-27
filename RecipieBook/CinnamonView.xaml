@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="RecipieBook.CinnamonView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RecipieBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="6,0,-6,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>            
+        </Grid.RowDefinitions>
+
+        <local:ButtonControl Grid.Row="0" Tag="cinnamon"></local:ButtonControl>
+
+        <TextBlock  Margin="10" Grid.Row="1"> Redirecting to your cinnamon recipie... </TextBlock>
+
+        <WebView
+            x:Name="webView"
+            Grid.Row="1">
+        </WebView>        
+    </Grid>
+</Page>
