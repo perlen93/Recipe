@@ -40,7 +40,7 @@ namespace RecipieBook
                     ContentFrame.Navigate(typeof(HomeView));
                     NavView.Header = "Home";
                     break;
-                
+
                 case "Saved":
                     ContentFrame.Navigate(typeof(SavedRecipiesView));
                     NavView.Header = "Saved recipies";
@@ -56,15 +56,15 @@ namespace RecipieBook
                 case "Cinnamon":
                     NavView.Header = "Cinnamon";
                     var reqUri2 = GetRequestUri("cinnamon");
-                    var recipieURL2 = await GetRandomRecipieURLAsync(reqUri2);                    
-                    ContentFrame.Navigate(typeof(CinnamonView), recipieURL2);                   
+                    var recipieURL2 = await GetRandomRecipieURLAsync(reqUri2);
+                    ContentFrame.Navigate(typeof(CinnamonView), recipieURL2);
                     break;
 
                 case "RndFood":
                     NavView.Header = "Random Food";
                     var reqUri1 = GetRequestUri("");
                     var recipieURL1 = await GetRandomRecipieURLAsync(reqUri1);
-                    ContentFrame.Navigate(typeof(RndFoodView), recipieURL1);                   
+                    ContentFrame.Navigate(typeof(RndFoodView), recipieURL1);
                     break;
             }
         }
@@ -156,8 +156,14 @@ namespace RecipieBook
             try
             {
                 httpResponse = await httpClient.GetAsync(requestUri);
-                httpResponse.EnsureSuccessStatusCode();
+
                 httpResponseBody = await httpResponse.Content.ReadAsStringAsync();
+               
+                if (httpResponseBody == null)
+                {
+                    httpResponse.EnsureSuccessStatusCode();
+                }
+                httpResponseBody = httpResponseBody.Split(new[] { "<!DOCTYPE" }, StringSplitOptions.RemoveEmptyEntries)[0];
             }
             catch (Exception ex)
             {
